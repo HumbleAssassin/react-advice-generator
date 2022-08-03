@@ -1,0 +1,69 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.app {
+   width: 100vw;
+   height: 100vh;
+   background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+      url("./images/buddhism.jpg");
+   background-size: cover;
+   background-position: 35% bottom;
+   /* background-repeat: no-repeat; */
+   position: relative;
+}
+
+.card {
+   /* width: 60%; */
+   padding: 45px 30px;
+   min-width: 450px;
+   background: #fff;
+   font-family: sans-serif;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0);
+   text-align: center;
+   transition: 0.5s;
+   border: 2px solid red;
+   border-radius: 15px;
+}
+
+.loaded {
+   transform: translate(-50%, -50%) scale(1);
+}
+
+button {
+   margin-top: 35px;
+   padding: 8px 24px;
+   background: teal;
+   color: yellow;
+   font-weight: 600;
+   letter-spacing: 1px;
+   border: none;
+   outline: none;
+   text-transform: uppercase;
+   border-radius: 15px 0;
+   position: relative;
+   transition: 0.2s;
+}
+
+button::after {
+   content: "";
+   position: absolute;
+   inset: 0;
+   transform: translate(8px, 8px);
+   border: 2px solid teal;
+   border-radius: 15px 0;
+   transition: 0.2s;
+}
+
+button:active {
+   transform: translate(1px, 1px);
+}
+
+button:active::after {
+   transform: translate(7px, 7px);
+}
